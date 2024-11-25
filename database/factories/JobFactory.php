@@ -17,7 +17,10 @@ class JobFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'offer' => $this->faker->jobTitle(),
+            'company' => $this->faker->company(),
+            'description' => $this->faker->realText($maxNbChars = 200),
+            'status' => $this->faker->ramdomElement(["In progress", "Completed"]),
         ];
     }
 }
