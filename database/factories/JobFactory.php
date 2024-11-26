@@ -5,7 +5,7 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Job>
+ * //@extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Job>
  */
 class JobFactory extends Factory
 {
@@ -20,7 +20,7 @@ class JobFactory extends Factory
             'offer' => $this->faker->jobTitle(),
             'company' => $this->faker->company(),
             'description' => $this->faker->realText($maxNbChars = 200),
-            'status' => $this->faker->ramdomElement(["In progress", "Completed"]),
+            'status' => $this->faker->randomElement(["In progress", "Completed"]),
         ];
     }
 }
