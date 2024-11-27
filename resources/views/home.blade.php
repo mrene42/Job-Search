@@ -2,8 +2,8 @@
 @section('content')
     
     <div>
-        <table>
-            <thead>
+        <table class="table">
+            <thead class="table-dark">
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Date</th>
@@ -13,7 +13,7 @@
                     <th scope="col">Status</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="table-group-divider">
                @foreach ($jobs as $job)
                  <tr>
                      <td>{{$job->id}}</td>

@@ -1,0 +1,20 @@
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 4vh;
+    padding: 5rem;
+}
+
+.table{
+    gap: 10vh;
+}
+
+.table-dark{
+    text-align: center;
+    font-size: 20px;
+}
+
+.table-group-divider{
+    color: rgb(3, 77, 87);
+}
