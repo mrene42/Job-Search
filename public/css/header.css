@@ -9,7 +9,7 @@ header{
 }
 
 header img{
-    width: 15rem;
+    width: 10rem;
 }
 
 header h1{
@@ -17,5 +17,4 @@ header h1{
     font-weight: 600;
     font-size: 80px;
     color: rgba(247,180,167,255);
-    
 }

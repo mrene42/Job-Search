@@ -4,8 +4,8 @@ footer{
     background-color:rgba(4, 45, 70, 0.831);
     align-items: center;
     justify-content: center;
-    padding: 1rem;
-    gap: 50vh;
+    padding: 1.5rem;
+    gap: 45%;
 }
 
 .logoNetworking{
@@ -15,4 +15,3 @@ footer{
 .textCopyright{
     color: azure;
 }
-
