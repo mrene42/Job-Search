@@ -18,7 +18,7 @@
                      <td>{{$job->id}}</td>
                      <td>{{$job->offer}}</td>
                      <td>{{$job->company}}</td>
-                     <td>{{$job->description}}</td>
+                     <td>{{$job->description}}...</td>
                      <td>{{$job->status}}</td>
                  </tr>
                @endforeach
