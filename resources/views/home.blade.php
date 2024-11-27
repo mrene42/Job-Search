@@ -1,14 +1,28 @@
 @extends('layouts.app')
 @section('content')
-    @foreach ($jobs as $job)
-    <div class="card" id = "jobsCard" style="width: 18rem;">
-        <img  id = "companyImage" src="..." class="card-img-top" alt="{{$jobs->job}}">
-        <div class="card-body">
-            <h5 class="card-title"> {{$job->offer}} </h5>
-            <h6 class="card-title"> {{$job->company}} </h6>
-            <p class="card-text"> {{$job->description}}... </p>
-            <p class="card-text"> {{$job->status}} </p>
-        </div>
+    
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Offer</th>
+                    <th scope="col">Company</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+               @foreach ($jobs as $job)
+                 <tr>
+                     <td>{{$job->id}}</td>
+                     <td>{{$job->offer}}</td>
+                     <td>{{$job->company}}</td>
+                     <td>{{$job->description}}</td>
+                     <td>{{$job->status}}</td>
+                 </tr>
+               @endforeach
+            </tbody>
+        </table>
     </div>
-    @endforeach
 @endsection
