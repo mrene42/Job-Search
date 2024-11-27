@@ -6,6 +6,7 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
+                    <th scope="col">Date</th>
                     <th scope="col">Offer</th>
                     <th scope="col">Company</th>
                     <th scope="col">Description</th>
@@ -16,6 +17,7 @@
                @foreach ($jobs as $job)
                  <tr>
                      <td>{{$job->id}}</td>
+                     <td>{{$job->created_at}}</td>
                      <td>{{$job->offer}}</td>
                      <td>{{$job->company}}</td>
                      <td>{{$job->description}}...</td>
