@@ -1,0 +1,18 @@
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    background-color:rgba(4, 45, 70, 0.831);
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 50vh;
+}
+
+.logoNetworking{
+    margin: 4vh;
+}
+
+.textCopyright{
+    color: azure;
+}
+
