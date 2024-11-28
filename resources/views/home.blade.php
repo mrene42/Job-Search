@@ -1,19 +1,18 @@
 @extends('layouts.app')
 @section('content')
-    
     <div>
         <table class="table">
-            <thead class="table-dark">
+            <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Offer</th>
-                    <th scope="col">Company</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Status</th>
+                    <th>#</th>
+                    <th>Date</th>
+                    <th>Offer</th>
+                    <th>Company</th>
+                    <th>Description</th>
+                    <th>Status</th>
                 </tr>
             </thead>
-            <tbody class="table-group-divider">
+            <tbody>
                @foreach ($jobs as $job)
                  <tr>
                      <td>{{$job->id}}</td>
