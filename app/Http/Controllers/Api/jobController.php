@@ -7,14 +7,14 @@ use App\Models\Job;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class jobController extends Controller
+class JobController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $jobs = job:: all();
+        $jobs = Job::all();
         return response()->json($jobs,200);
     }
 
