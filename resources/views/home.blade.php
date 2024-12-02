@@ -10,6 +10,7 @@
                     <th>Company</th>
                     <th>Description</th>
                     <th>Status</th>
+                    <th>Info</th>
                 </tr>
             </thead>
             <tbody>
@@ -21,6 +22,11 @@
                      <td>{{$job->company}}</td>
                      <td>{{$job->description}}...</td>
                      <td>{{$job->status}}</td>
+                     <td>
+                        <a href="{{ route('showDetail', ['id' => $job->id]) }}">
+                            <button type="button" class="btn">Show</button>
+                        </a>
+                    </td>
                  </tr>
                @endforeach
             </tbody>
