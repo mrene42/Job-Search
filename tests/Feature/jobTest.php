@@ -12,15 +12,10 @@ class jobTest extends TestCase
      * A basic feature test example.
      */
     use RefreshDataBase;
-   public function test_List_Of_products_Can_Be_retrived()
-   {
-    $this->withoutExceptionHandling();
-
-    job::all();
-
-    $response = $this->get('/');
-
+   public function test_CheckIfReceiveAllEntryOfJobInJsonFile() {
+    $job = job::factory(2)->create();
+    $response = $this->get(route("apihome"));
     $response->assertStatus(200)
-            ->assertViewIs('home');
+            ->assertJsonCount(2);
    }
 }
