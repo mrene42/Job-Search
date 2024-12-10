@@ -1,7 +1,7 @@
 footer{
     display: flex;
     flex-wrap: wrap;
-    background-color:rgba(4, 45, 70, 0.831);
+    background-color:#113b3f;
     align-items: center;
     justify-content: center;
     padding: 1.5rem;

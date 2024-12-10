@@ -3,9 +3,9 @@ header{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color:rgba(4, 45, 70, 0.831);
-    gap: 10vh;
-    padding: 1rem;
+    background-color:#113b3f;
+    gap: 5vh;
+    padding: 0,3rem;
 }
 
 header img{
