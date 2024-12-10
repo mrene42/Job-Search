@@ -7,7 +7,11 @@
             <h3>{{$job->offer}}</h3>
             <h4>{{$job->company}}</h4>
             <p>{{$job->description}}</p>
-            <h5>{{$job->status}}</h5>
+            <h5>
+                <span class="{{ $job->status == 'In progress' ? 'status-green' : 'status-red' }}">
+                {{ $job->status }}
+                </span>
+            </h5>
     </div>
     
     <div>
