@@ -1,10 +1,9 @@
 body{
     margin: 0%;
-    
-}
-main{
     display: flex;
     flex-wrap: wrap;
+}
+main{
     justify-content: space-around;
     gap: 2vh;
     padding: 3rem;
