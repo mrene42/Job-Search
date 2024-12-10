@@ -15,4 +15,8 @@ class Job extends Model
         'description',
         'status',
     ];
+
+    public function follows(){
+        return $this->hasMany(Follow::class);
+    }
 }
