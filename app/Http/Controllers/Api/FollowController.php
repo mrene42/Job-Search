@@ -14,7 +14,8 @@ class FollowController extends Controller
      */
     public function index()
     {
-        
+        $follows = Follow::all();
+        return response()->json($follows, 200);
     }
 
     /**
