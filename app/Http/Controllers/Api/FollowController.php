@@ -21,11 +21,11 @@ class FollowController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    /*public function create()
     {
         //
     }
-
+    */
     /**
      * Store a newly created resource in storage.
      */
@@ -61,25 +61,35 @@ class FollowController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    /*public function show(string $id)
     {
-        //
-    }
+        $follow = Follow::find($id);
+        return response()->json($follow, 200);
+    } */
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    /* public function edit(string $id)
     {
         //
     }
-
+    */
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
     {
-        //
+        $follow = Follow::find($id);
+        
+        $follow->update([
+            'job_id' => $request->job_id,
+            'news' => $request->news,
+        ]);
+
+        $follow->save();
+        
+        return response()->json($follow, 200);
     }
 
     /**
@@ -87,6 +97,7 @@ class FollowController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $follow = Follow::find($id);
+        $follow->delete();
     }
 }

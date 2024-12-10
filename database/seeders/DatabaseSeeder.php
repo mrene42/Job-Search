@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Job;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\User;
+use App\Models\Follow;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -23,5 +24,7 @@ class DatabaseSeeder extends Seeder
         */
 
         Job::factory(5)->create();
+
+        Follow::factory(10)->create();
     }
 }
