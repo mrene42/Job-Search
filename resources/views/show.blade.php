@@ -3,6 +3,7 @@
     <a href="{{ route("home")}}">
         <button class="btnSecondary">Back</button>
     </a>
+   
     <div id="offerShow">
             <h3>{{$job->offer}}</h3>
             <h4>{{$job->company}}</h4>
@@ -13,15 +14,14 @@
                 </span>
             </h5>
     </div>
-    
+    <hr>
     <div>
-        <h2>Follow Job</h2>
         <table class="tableFollow">
             <thead>
                 <tr>
                     <th>Id</th>
                     <th>Job ID</th>
-                    <th>date</th>
+                    <th>Date</th>
                     <th>News</th>
                 </tr>
             </thead>
