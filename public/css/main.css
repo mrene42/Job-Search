@@ -6,14 +6,14 @@ body{
 main{
     justify-content: space-around;
     gap: 2vh;
-    padding: 3rem;
+    padding: 5rem;
     background-color: rgb(222, 226, 226);
 }
 
 .tableJob{
     font-family:sans-serif;
     margin: 20px auto;
-    width: 90%;
+    width: 95%;
     border-collapse: collapse;
     box-shadow: 0 2px 5px rgba(2, 2, 2, 0.16);
 }
