@@ -15,7 +15,7 @@ main{
     margin: 20px auto;
     width: 95%;
     border-collapse: collapse;
-    box-shadow: 0 2px 5px rgba(2, 2, 2, 0.16);
+    box-shadow: 0 3px 6px rgba(2, 2, 2, 0.18);
 }
 
 thead {
