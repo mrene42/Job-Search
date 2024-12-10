@@ -23,7 +23,11 @@
                      <td>{{$job->offer}}</td>
                      <td>{{$job->company}}</td>
                      <td>{{$job->description}}</td>
-                     <td>{{$job->status}}</td>
+                     <td>
+                        <span class="{{ $job->status == 'In progress' ? 'status-green' : 'status-red' }}">
+                            {{ $job->status }}
+                        </span>
+                    </td>
                      <td>
                         <a href="{{ route('showDetail', ['id' => $job->id]) }}">
                             <button class="btn">Show</button>
