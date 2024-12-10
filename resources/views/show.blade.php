@@ -13,9 +13,7 @@
     </div>
     
     <div>
-
         <h2>Follow Job</h2>
-
         <table class="tableFollow">
             <thead>
                 <tr>
@@ -27,16 +25,14 @@
             </thead>
             <tbody>
                 @foreach ($job->follows as $follow)
-                
                     <tr>
                         <td>{{$follow->id}}</td>
                         <td>{{$follow->job_id}}</td>
-                        <td>{{$follow->date}}</td>
+                        <td>{{$follow->created_at->format('d/m/y')}}</td>
                         <td>{{$follow->news}}</td>
-                    </tr>
-                  
+                    </tr> 
                 @endforeach
-
+                
                 @if (!($job->follows)->isEmpty())
                 @else
                     <tr>
