@@ -11,4 +11,4 @@ Route::post("/jobs",[JobController::class,"store"])->name("apiCreateJob");
 Route::put("/job/{id}", [JobController::class,"update"])->name("apiUpdateJob");
 Route::get("/job/{id}",[JobController::class,"show"])->name("apiShowJob");
 
-Route::post("/jobs/{jobId}/follows",[FollowController::class, "store"])->name("apiHomeFollow");
+Route::post("/jobs/{jobId}/follows",[FollowController::class, "store"])->name("apiCreateFollow");
