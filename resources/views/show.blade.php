@@ -1,15 +1,13 @@
 @extends('layouts.app')
 @section('content')
-    <a href="{{ route("home")}}" class="btnSecondary">Back</a>
+    <a href="{{ route("home")}}">
+        <button class="btnSecondary">Back</button>
+    </a>
     <div id="offerShow">
-        <div>
             <h3>{{$job->offer}}</h3>
             <h4>{{$job->company}}</h4>
-        </div>
-        <div>
             <p>{{$job->description}}</p>
             <h5>{{$job->status}}</h5>
-        </div>
     </div>
     
     <div>

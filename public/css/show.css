@@ -1,0 +1,16 @@
+.offerShow{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 3%;
+}
+
+
+.btnSecondary{
+    font-size: 25px;
+    color: rgb(44, 44, 195);
+    background-color:rgb(110, 166, 235);
+    border-color: blue;
+    margin-bottom: 40px;
+}
+
