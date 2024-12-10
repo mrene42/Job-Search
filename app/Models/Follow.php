@@ -12,8 +12,8 @@ class Follow extends Model
     protected $fillable =[
         'job_id',
         'news',
-        'observations',
-        'status',
+       // 'observations',
+       // 'status',
     ];
 
     public function job(){

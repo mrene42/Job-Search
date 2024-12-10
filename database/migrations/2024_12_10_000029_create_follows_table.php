@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('follows', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('job_id')->constrained('jobs')->onDelete('cascade');
+            $table->foreignID('job_id')->constrained('jobs')->onDelete('cascade');
             $table->text('news');
-            $table->text('observations');
-            $table->enum('status', ['Done','Standby','Finished']);
+            //$table->text('observations');
+           // $table->enum('status', ['Done','Standby','Finished']);
             $table->timestamps();
         });
     }
