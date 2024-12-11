@@ -10,8 +10,12 @@ Job_Search is a web application developed in Laravel 11 that allows you to manag
 In this quick guide you will learn about the main functionalities of  project "Job_Search":
 
 1. On the main page you have information about the list of job offers that we will apply and that we will be able to follow up on.
+   
+![Website](https://github.com/user-attachments/assets/7e8b0f62-91c4-4c57-bdb7-c3f1fbdd9261)
 
 - In each row there is a “Show” button that when clicked we will see the job offer with the related table of the news of the offer that we applied.
+  
+![Show](https://github.com/user-attachments/assets/87b8ecd4-8c8e-4fd5-af12-83594f79cbe4)
 
 - In the show view we also have a "back" button to return to the main page
 
@@ -83,7 +87,9 @@ php artisan serve
 ```
     
 ##  Diagrams made (BBDD)
+We have our database called "job search" from which we add two tables that are related: "jobs" are the job offers and "follows" are the follow-ups of each job offer.
 
+![Tables](https://github.com/user-attachments/assets/fe222dd2-552b-4cf5-a5bc-8a711c423d59)
 
 ## EndPoints
 We have two tables: jobs and follows you can create, edit, delete or read a job or follow from Postman.
@@ -135,16 +141,18 @@ http://127.0.0.1:8000/api/follow/{id}
 ##  Execution of the tests
 
 This project has a **81,5%** of test coverage.
+![Test](https://github.com/user-attachments/assets/436ddae5-9deb-4170-9436-2a2ac9bdfb59)
 
 To run the project tests, use the following command:
 ```
     php artisan test --coverage
 ```
-
 You can also see the coverage in a web browser using:
 ```
   php artisan test --coverage-html=coverage-report
 ```
+![tests](https://github.com/user-attachments/assets/6b90896e-683a-40b3-96ac-96fb0a680067)
+
 ## Tech and tools
 
 <a href='#777BB4' target="_blank"><img alt='PHP' src='https://img.shields.io/badge/PHP-100000?style=for-the-badge&logo=PHP&logoColor=FFFFFF&labelColor=8892be&color=8892be'/></a>
@@ -163,7 +171,7 @@ You can also see the coverage in a web browser using:
 
 ## Autor
 
-- [@René](https://github.com/mrene42)
+[@René](https://github.com/mrene42)
 
 >[!NOTE]
 >I'm learning.
