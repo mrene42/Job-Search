@@ -1,67 +1,169 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Job Search
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+>[!CAUTION]
+>Please read all the points of the README in order to make good use of the project. Thank you. 
 
-## About Laravel
+Job_Search is a web application developed in Laravel 11 that allows you to manage job offers and their related follow-ups. It uses MVC and Faker pattern to generate test data. The system allows users to view, create, update and delete job offers through an intuitive web interface and a fully functional REST API. Each job posting can be linked to one or more tracking records, which provide related updates or news.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Guide
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+In this quick guide you will learn about the main functionalities of  project "Job_Search":
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. On the main page you have information about the list of job offers that we will apply and that we will be able to follow up on.
 
-## Learning Laravel
+- In each row there is a “Show” button that when clicked we will see the job offer with the related table of the news of the offer that we applied.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- In the show view we also have a "back" button to return to the main page
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+2. If you want to add offer news, edit or delete, you can do it from postman.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## Installation Requirements
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+In order to run this project locally, you need:
 
-### Premium Partners
+1. XAMPP (or any other local server that supports PHP and MySQL)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+2. A modern web browser
 
-## Contributing
+3. VSC Terminal
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+4. Composer
 
-## Code of Conduct
+5. Node.js (install npm)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+6. xdebug (for tests coverage)
 
-## Security Vulnerabilities
+7. Postman (or any other platform to use for API)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Installation
 
-## License
+1. Install project with git clone
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# Job-Search
+```bash
+  git clone https://github.com/mrene42/Job-Search.git
+```
+
+2. Install composer:
+
+```
+composer install
+``` 
+
+3. Install NPM:
+
+```
+npm install
+``` 
+
+4. Create an .env by taking the example .env.example file and modify:
+
+- DB_CONNECTION=mysql
+- DB_DATABASE=job_search
+
+5. Create a database in MySQL
+-  In the database manager “phpMyAdmin” of MySQL create only the database without tables.
+- Generate the tables and the data fakers with migrate.
+
+6. Migrate the tables:
+
+```
+php artisan migrate:fresh --seed
+```
+
+7. Install dependencies:
+
+-   Run NPM in one terminal:
+```
+npm run dev
+```
+-   Run Laravel in another terminal:
+```
+php artisan serve
+```
+    
+##  Diagrams made (BBDD)
+
+
+## EndPoints
+We have two tables: jobs and follows you can create, edit, delete or read a job or follow from Postman.
+
+### Jobs
+GET    (read all jobs): 
+```
+http://127.0.0.1:8000/api/jobs
+```
+GET     (read one job): 
+```
+http://127.0.0.1:8000/api/jobs/{id}
+```
+POST    (create a new job offer): 
+```
+http://127.0.0.1:8000/api/jobs
+```
+PUT     (edit one job): 
+```
+http://127.0.0.1:8000/api/job/{id}
+```
+DELETE  (delete an job offer): 
+```
+http://127.0.0.1:8000/api/job/{id}
+```
+### Follow
+GET (read all jobs):
+```
+http://127.0.0.1:8000/api/follows 
+```
+GET (read one follow):
+```
+http://127.0.0.1:8000/api/follows/{id}
+```
+POST (create a news follow):
+```
+http://127.0.0.1:8000/api/jobs/{id}/follows
+```
+
+PUT (edit one follow):
+```
+http://127.0.0.1:8000/api/follows{id}
+```
+DELETE (delete a follow):
+```
+http://127.0.0.1:8000/api/follow/{id}
+```
+
+##  Execution of the tests
+
+This project has a **81,5%** of test coverage.
+
+To run the project tests, use the following command:
+```
+    php artisan test --coverage
+```
+
+You can also see the coverage in a web browser using:
+```
+  php artisan test --coverage-html=coverage-report
+```
+## Tech and tools
+
+<a href='#777BB4' target="_blank"><img alt='PHP' src='https://img.shields.io/badge/PHP-100000?style=for-the-badge&logo=PHP&logoColor=FFFFFF&labelColor=8892be&color=8892be'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='HTML5' src='https://img.shields.io/badge/HTML5-100000?style=for-the-badge&logo=HTML5&logoColor=white&labelColor=E34F26&color=E34F26'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='CSS3' src='https://img.shields.io/badge/CSS3-100000?style=for-the-badge&logo=CSS3&logoColor=white&labelColor=1572B6&color=1572B6'/></a>
+<a href='#4479A1' target="_blank"><img alt='MySQL' src='https://img.shields.io/badge/MySQL-100000?style=for-the-badge&logo=MySQL&logoColor=white&labelColor=00758f&color=00758f'/></a>
+<a href='#FF2D20' target="_blank"><img alt='LARAVEL' src='https://img.shields.io/badge/LARAVEL-100000?style=for-the-badge&logo=LARAVEL&logoColor=white&labelColor=F05340&color=F05340'/></a>
+<a href='visual studio code' target="_blank"><img alt='VSC' src='https://img.shields.io/badge/VSC-100000?style=for-the-badge&logo=VSC&logoColor=white&labelColor=0277BD&color=0277BD'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='Git' src='https://img.shields.io/badge/Git-100000?style=for-the-badge&logo=Git&logoColor=white&labelColor=F05032&color=F05032'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='GitHub' src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=GitHub&logoColor=white&labelColor=181717&color=181717'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='GitHub Pages' src='https://img.shields.io/badge/GitHub_Pages-100000?style=for-the-badge&logo=GitHub Pages&logoColor=white&labelColor=222222&color=222222'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='composer' src='https://img.shields.io/badge/composer-100000?style=for-the-badge&logo=composer&logoColor=white&labelColor=8f6447&color=8f6447'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='postman' src='https://img.shields.io/badge/Postman-100000?style=for-the-badge&logo=postman&logoColor=white&labelColor=FF6C37&color=FF6C37'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='node.js' src='https://img.shields.io/badge/Node.js-100000?style=for-the-badge&logo=node.js&logoColor=white&labelColor=82cc27&color=82cc27'/></a>
+<a href='https://github.com/shivamkapasia0' target="_blank"><img alt='xampp' src='https://img.shields.io/badge/xampp-100000?style=for-the-badge&logo=xampp&logoColor=white&labelColor=FB7A24&color=FB7A24'/></a>
+
+## Autor
+
+- [@René](https://github.com/mrene42)
+
+>[!NOTE]
+>I'm learning.
